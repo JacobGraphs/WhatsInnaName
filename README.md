@@ -22,7 +22,7 @@ No, but there is more. Just not much more.
 
 Just some facts about movies: </br></br>
 There are <b>TWELVE</b> Star Trek movies</br></br>
-Billy Bob Thornton directed a movie about <b>horses</b>, and they spent 60 million dollars making that thing, losing many millions. But at the same time, he wrote and directed Sling Blade and made 24x the budget back on gross returns.</br>
+Billy Bob Thornton directed a movie about <b>horses</b>, and they spent 60 million dollars making that thing, losing many millions. But at the same time, he wrote and directed Sling Blade and made 24x the budget back on gross returns.</br></br>
 Woody Allen directed too many movies to count, lost money on many of them, and this tracking of Rotten Tomatoes Scores seems to illustrate the presumed issue here</br></br>
 ![woody](https://github.com/JacobGraphs/WhatsInnaName/blob/master/img/woody_allen.jpg)
 
