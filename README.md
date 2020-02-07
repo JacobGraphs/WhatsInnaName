@@ -75,3 +75,6 @@ Here's the same histogram with all directors with only 1 movie under their belt 
 </br> I was curious why someone with multiple losses was in the far right ends of the x-axis, so I did some digging. Turns out a lot of Woody Allen's movies straight up lose money. </br>
 Here's a breakdown of the movie set filtered and cleaned.
 ![Hist](https://github.com/JacobGraphs/WhatsInnaName/blob/master/img/profitandnot.png) 
+</br></br>
+#### Naive Bayes and Results
+After producing visuals breaking down director frequency, I moved onto predicting profitability. I took the text column I created earlier and fed it into a vectorizer with n_gram range of 1 to 2 so I could pick up titles and directors. My classifier was the Naive Bayes model and my targets were the binary profitable or not profitable. I randomly split my data and then trained and tested. I did a 70/30 split between training/testing. No matter the seed, I pretty much always got the same accuracy, precision, and recall. I'd have a ton of true positives, few true negatives, few false negatives, and many false positives. Accuracy was 61%, Precision was 61%, and Recall was 82%. If you were to take the same data and choose the more likely outcome "Profitable" as your option, you'd get about 60% of them correct, but your accuracy precision and recall would drop. 
