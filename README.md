@@ -28,10 +28,10 @@ Woody Allen directed too many movies to count, lost money on many of them, and t
 
 </br></br></br>
 I thought it may have a positive ROI for studios to invest some time in a machine learning algorithm to help determine if movies should be made or not. In order to do that, I'm going to make the assumption that BigShotStudioExec wants their movie to at least earn back the production budget. I don't think this is a lofty ask of your creatives: Produce something that costs less than what it collects from people. Instead of spending all day trying to decide if <b>*Fast and the Furious 14: Valentines Day*</b> or <b>*Hobbs & Shaw 2: Maybe Gerard Butler's a Villain*</b> will be the last hoorah for the Fast and Furious Series, I figure we let the computer do the work. There's enough movies by now that surely we can figure that out. 
-</br></br>
+</br></br></br>
 To start, I'll go ahead and grab this dataset of movies pulled from IMDB. 
 </br>https://www.kaggle.com/stefanoleone992/imdb-extensive-dataset</br>
-It's kind of messy and there's a lot of null's.
+It's pretty clean and there's a lot of null's.
 
 </br></br>
 ### Cleaning and Preparing for Analysis
@@ -58,7 +58,14 @@ Originally, the data columns are as follows: </br>
 - meta_score: a float</br>
 - reviews_from_users: a float</br>
 - reviews_from_critics: a float</br></br>
-To start, I subsetted the movies into only a few columns: ('title', 'director', 'description', 'year', 'country', 'budget', 'usa_gross_income', and 'worlwide_gross_income') Second, I eliminated any movies where budget, usa_gross_income, and worlwide_gross_income did not have a value. I removed all movies that were not produced in the USA. I had to put in a .str.replace bit to remove '$' and allow the data to be manipulatable. If the total amount in worlwide_gross_income exceeded the budget, a column 'Profitable' would be marked 1, otherwise 0. Next up was cleaning up the text columns for analysis. I removed all punctuation from description, title, and genre. Then I lowercased, description, title, genre, and director. Then I removed all stop words from description.
+To start, I subsetted the movies into only a few columns:</br></br> ('title', 'director', 'description', 'year', 'country', 'budget', 'usa_gross_income', and 'worlwide_gross_income')</br></br>
+Second, I eliminated any movies where budget, usa_gross_income, and worlwide_gross_income did not have a value.</br></br>
+I removed all movies that were not produced in the USA.</br></br>
+I had to put in a .str.replace bit to remove '$' and allow the data to be manipulatable.</br></br>
+If the total amount in worlwide_gross_income exceeded the budget, a column 'Profitable' would be marked 1, otherwise 0.</br></br> Next up was cleaning up the text columns for analysis. </br></br>
+I removed all punctuation from description, title, and genre.</br></br>
+Then I lowercased, description, title, genre, and director. </br></br>
+Then I removed all stop words from description. 
 
 </br></br>
 Combining movie title, director, genre, and description into a singular column, 'text' was my last step before training and testing my data with the Naive Bayes model.
