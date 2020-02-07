@@ -77,7 +77,29 @@ Here's a breakdown of the movie set filtered and cleaned.
 ![Hist](https://github.com/JacobGraphs/WhatsInnaName/blob/master/img/profitandnot.png) 
 </br></br>
 #### Naive Bayes and Results
-After producing visuals breaking down director frequency, I moved onto predicting profitability. I took the text column I created earlier and fed it into a vectorizer with n_gram range of 1 to 2 so I could pick up titles and directors. My classifier was the Naive Bayes model and my targets were the binary profitable or not profitable. I randomly split my data and then trained and tested. I did a 70/30 split between training/testing. No matter the seed, I pretty much always got the same accuracy, precision, and recall. I'd have a ton of true positives, few true negatives, few false negatives, and many false positives. Accuracy was 61%, Precision was 61%, and Recall was 82%. If you were to take the same data and choose the more likely outcome "Profitable" as your option, you'd get about 60% of them correct, but your accuracy precision and recall would drop. 
+After producing visuals breaking down director frequency, I moved onto predicting profitability. I took the text column I created earlier and fed it into a vectorizer with n_gram range of 1 to 2 so I could pick up titles and directors. My classifier was the Naive Bayes model and my targets were the binary profitable or not profitable. I randomly split my data and then trained and tested. I did a 70/30 split between training/testing. No matter the seed, I pretty much always got the same accuracy, precision, and recall. I'd have a ton of true positives, few true negatives, few false negatives, and many false positives.</br> </br>
+
+</br>If you were to take the same data and choose the more likely outcome "Profitable" as your option, you'd have similar accuracy precision and recall, but zero true negatives. Considering the cost of a false positive is someone's millions of dollars funding a creative project apparently not many of us were asking for in the first place, maybe we should focus on getting fewer false positives and more true negatives. Here's the breakdown for choosing the mode and hoping you make money. 1335 movies test through this model. </br>
+
+- True Positives:  801 </br>
+- False Positives: 534 </br>
+- True Negatives:    0 </br>
+- False Negatives:   0 </br></br>
+
+- Accuracy:  60%
+- Precision: 60%
+- Recall:    100% </br></br>
+
+An Example Run Down of the Confusion Matrix, 1335 movies tested: </br>
+- True Positives:  669 </br>
+- False Positives: 436 </br>
+- True Negatives:  123 </br>
+- False Negatives: 107 </br></br>
+
+- Accuracy:  59% </br>
+- Precision: 61%</br>
+- Recall:    85% </br>
+
 
 #### Extraneous Tasks That May or May Not Have Been Needed From the Get Go
-This model isn't very capable. Secondary steps toward improving the model would be looking at the top actors billed in the credits. I didn't include them because frankly I thought description and director would be enough to accurately predict many. </br> Additionally, experimenting with different weights on the columns could tease more out. I toyed with having director in the text column 5 times, for instance. I would not pass this model onto the BigShotStudioExec for fear of my job.
+This model isn't very capable. Secondary steps toward improving the model would be looking at the top actors billed in the credits. I didn't include them because frankly I thought description and director would be enough to accurately predict many. </br> Additionally, experimenting with different weights on the columns could tease more out. I toyed with having director in the text column 5 times, for instance. Overall, I would not pass this model onto the BigShotStudioExec for fear of my job. I would tell them that I could do better than throwing darts at the board and it would cost them less money in underviewed flicks.
