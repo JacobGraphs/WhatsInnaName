@@ -7,9 +7,8 @@ Using Naive Bayes to predict movie profitability given only a few text columns
 ![moviessuck](https://github.com/JacobGraphs/WhatsInnaName/blob/master/img/movies_suck.jpg)
 </br></br>
 Some movies suck. Some movies don't. A decent amount of them make money. End of story.
-</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-
-No, but there is more. Just not much more.
+</br></br>
+No, there is more. Just not much more.
 
 ### Table of Contents
 #### 1. Introduction
